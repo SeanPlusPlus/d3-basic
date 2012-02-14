@@ -1,15 +1,18 @@
-var data = [{year: 2006, books: 54},
-            {year: 2007, books: 43},
-            {year: 2008, books: 41},
-            {year: 2009, books: 44},
-            {year: 2010, books: 35}];
+var data = [{president: "obama",     awesomePoints: 154},
+            {president: "kennedy",   awesomePoints: 133},
+            {president: "truman",    awesomePoints: 223},
+            {president: "jefferson", awesomePoints: 93},
+            {president: "adams",     awesomePoints: 83},
+            {president: "lincoln",   awesomePoints: 141},
+            {president: "roosevelt", awesomePoints: 84},
+            {president: "clinton",   awesomePoints: 75}];
 
 var barWidth = 40;
-var width = (barWidth + 10) * data.length;
+var width = (barWidth + 20) * data.length;
 var height = 200;
 
 var x = d3.scale.linear().domain([0, data.length]).range([0, width]);
-var y = d3.scale.linear().domain([0, d3.max(data, function(datum) { return datum.books; })]).
+var y = d3.scale.linear().domain([0, d3.max(data, function(datum) { return datum.awesomePoints; })]).
   rangeRound([0, height]);
 
 var padding = 30;
@@ -23,8 +26,8 @@ barDemo.selectAll("rect").
   enter().
   append("svg:rect").
   attr("x", function(datum, index) { return x(index); }).
-  attr("y", function(datum) { return height - y(datum.books); }).
-  attr("height", function(datum) { return y(datum.books); }).
+  attr("y", function(datum) { return height - y(datum.awesomePoints); }).
+  attr("height", function(datum) { return y(datum.awesomePoints); }).
   attr("width", barWidth).
   attr("fill", "#2d578b");
 
@@ -32,12 +35,12 @@ barDemo.selectAll("text").
   data(data).
   enter().append("svg:text").
   attr("x", function(datum, index) { return x(index) + barWidth; }).
-  attr("y", function(datum) { return height - y(datum.books); }).
+  attr("y", function(datum) { return height - y(datum.awesomePoints); }).
   attr("dx", -barWidth/2).
   attr("dy", "1.2em").
   attr("text-anchor", "middle").
   attr("style", "font-size: 12; font-family: Helvetica, sans-serif;").
-  text(function(datum) { return datum.books;}).
+  text(function(datum) { return datum.awesomePoints;}).
   attr("fill", "white");
 
 barDemo.selectAll("text.yAxis").
@@ -48,6 +51,6 @@ barDemo.selectAll("text.yAxis").
   attr("dx", -barWidth/2).
   attr("text-anchor", "middle").
   attr("style", "font-size: 12; font-family: Helvetica, sans-serif").
-  text(function(datum) { return datum.year;}).
+  text(function(datum) { return datum.president;}).
   attr("transform", "translate(0, 18)").
   attr("class", "yAxis");
