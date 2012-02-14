@@ -1,11 +1,11 @@
-var data = [{president: "obama",     awesomePoints: 154},
+var data = [{president: "truman",    awesomePoints: 159},
+            {president: "obama",     awesomePoints: 150},
             {president: "kennedy",   awesomePoints: 133},
-            {president: "truman",    awesomePoints: 223},
             {president: "jefferson", awesomePoints: 93},
             {president: "adams",     awesomePoints: 83},
-            {president: "lincoln",   awesomePoints: 141},
-            {president: "roosevelt", awesomePoints: 84},
-            {president: "clinton",   awesomePoints: 75}];
+            {president: "lincoln",   awesomePoints: 72},
+            {president: "roosevelt", awesomePoints: 64},
+            {president: "clinton",   awesomePoints: 60}];
 
 var barWidth = 40;
 var width = (barWidth + 20) * data.length;
