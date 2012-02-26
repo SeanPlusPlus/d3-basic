@@ -2,5 +2,5 @@
 require 'sinatra'
 
 get '/' do
-  'Hello world!'
+  '<p><a href="/vertical.html">vertical</a></p><p><a href="/horizontal.html">horizontal</a></p>'
 end
