@@ -1,0 +1,21 @@
+{
+ "name": "dataSet",
+ "children": [
+  {
+   "name": "obama",
+   "children": [ { "name": "AmountOfChillDudes", "size": 700 } ]
+  },
+  {
+   "name": "truman",
+   "children": [ { "name": "TotalStoke", "size": 550 } ]
+  },
+  {
+   "name": "roosevelt",
+   "children": [ { "name": "TotalStoke", "size": 487 } ]
+  },
+  {
+   "name": "kennedy",
+   "children": [ { "name": "TotalStoke", "size": 223 } ]
+  }
+ ]
+}

@@ -1,7 +1,5 @@
-this content was originally from this post:
+d3-basic
 
-http://www.recursion.org/d3-for-mere-mortals/
+a collection of example graphs using the d3.js library:
 
-it is a super slim refactor from the above.
-
-yo!
+https://github.com/mbostock/d3
